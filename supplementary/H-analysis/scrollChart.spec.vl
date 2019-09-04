@@ -1,0 +1,32 @@
+{
+    "vconcat": [
+        {
+            "data": {"url": "../Users/jonas/Desktop/P9/results/20190711_pilot_3/outputs/201907121200_scroll.csv", "type": "csv"},
+            "mark": "line",
+            "encoding": {
+                "x": {"field": "relative_time", "type": "quantitative", "axis": {"labels": false, "title": false}, "scale": {"domain": [0, 600]}},
+                "y": {"field": "absolutePosition", "type": "quantitative", "axis": {"title": "Scroll Position"}},
+                "color": {"value": "#006894"}
+            }, "width": 1600, "height": 80
+        },
+        {
+            "data": {"url": "../Users/jonas/Desktop/P9/results/20190711_pilot_3/outputs/201907121200_segments.csv", "type": "csv"},
+            "mark": "bar",
+            "encoding": {
+                "x": {"field": "from", "type": "quantitative", "axis": {"title": "Time since the start of the session"}, "scale": {"domain": [0, 600]}},
+                "x2": {"field": "to", "type": "quantitative"},
+                "color": {
+                    "field": "name", "type": "nominal",
+                    "axis": {"title": "Phases"}, 
+                    "sort": ["viewing", "typing", "inactive"],
+                    "scale": {"domain": ["viewing", "typing", "inactive"], "range": ["#006894", "#FFC900", "#A18D7D"]}
+                } 
+            }, "width": 1600, "height": 30
+        } 
+    ],
+    "config": {
+        "concat": { 
+            "spacing": 0
+        }
+    }
+}
